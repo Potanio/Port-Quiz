@@ -9,8 +9,9 @@ score = 0
 
 answer = input("What port does FTP use?(You can use either one) ")
 accepted_answers2 = ["20", "21"]
-if answer != accepted_answers2:
+if answer in accepted_answers2:
     print("Correct!")
+    score +=1
 else:
     print("Incorrect!")  
 
@@ -107,7 +108,7 @@ else:
 
 answer = input("What port does DHCP use? ")
 accepted_answers3 = {"67", "68"}
-if answer != accepted_answers3:
+if answer in accepted_answers3:
     print("Correct!")
     score +=1
 else:
@@ -115,7 +116,7 @@ else:
 
 answer = input("What port does SNMP use? ")
 accepted_answers4 = {"161", "162"}
-if answer != accepted_answers4:
+if answer in accepted_answers4:
     print("Correct!")
     score +=1
 else:
@@ -166,7 +167,7 @@ else:
 
 answer = input("What port does SIP use? ")
 accepted_answers5= {"5060", "5061"}
-if answer != accepted_answers5:
+if answer in accepted_answers5:
     print("Correct!")
     score +=1
 else:
@@ -193,7 +194,7 @@ if answer == "3306":
 else:
     print("Incorrect!")
 
-    print("You got " + str(score) + " questions correct!")
+    print(f"You got {score} questions correct!")
     print("You got " + str((score / 25) * 100) + "%.")
     print("Thank you for playing! ")
 
